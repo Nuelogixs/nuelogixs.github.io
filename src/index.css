@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-base: #07111f;
+    --bg-secondary: #0d1726;
+    --bg-surface: #111d2d;
+    --bg-elevated: #162337;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    
+    --nuelogixs-blue: #2563eb;
+    --nuelogixs-cyan: #22d3ee;
+    --nuelogixs-green: #10b981;
+    
+    --esik-emerald: #10b981;
+    --esik-purple: #8b5cf6;
+    --esik-cyan: #06b6d4;
+  }
+
+  body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom Utilities */
+.tabular-numbers {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+.glass-panel {
+  background: rgba(17, 29, 45, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.25s ease;
+}
+
+.glass-panel-hover:hover {
+  background: rgba(22, 35, 55, 0.88);
+  border-color: rgba(34, 211, 238, 0.3);
+  box-shadow: 0 12px 32px -8px rgba(37, 99, 235, 0.15);
+  transform: translateY(-2px);
+}
+
+.glass-card-esik:hover {
+  border-color: rgba(16, 185, 129, 0.35);
+  box-shadow: 0 12px 32px -8px rgba(16, 185, 129, 0.18);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07111f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Grid animation effect */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Glowing route line animations */
+@keyframes flowDash {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+.animate-flow {
+  stroke-dasharray: 8 8;
+  animation: flowDash 2s linear infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.15);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}

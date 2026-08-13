@@ -1,0 +1,6 @@
+{
+  "name": "Nuelogixs × Esik Pay Ecosystem",
+  "description": "Unified Logistics & Intelligent Financial Infrastructure Platform",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
