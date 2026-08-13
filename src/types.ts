@@ -49,7 +49,7 @@ export interface UtilityService {
   id: string;
   name: string;
   code: string;
-  category: 'electricity' | 'airtime' | 'data' | 'cable' | 'disbursement' | 'business';
+  category: 'electricity' | 'airtime' | 'data' | 'cable' | 'autopay' | 'disbursement' | 'business';
   icon: string;
   description: string;
   placeholderAmount: string;

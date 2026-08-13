@@ -1,6 +1,7 @@
 import React from 'react';
 import { Layers, ArrowUpRight } from 'lucide-react';
 import { APP_URLS } from '../config/appUrls';
+import { EnterpriseFooterBanner } from './EnterpriseFooterBanner';
 
 interface FooterProps {
   onNavigateSection: (sectionId: string) => void;
@@ -9,8 +10,12 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onNavigateSection, onOpenAction }) => {
   return (
-    <footer id="company" className="relative bg-[#040b14] border-t border-slate-800/80 pt-16 pb-12 px-4 sm:px-6 lg:px-8 text-slate-400 text-xs">
-      <div className="max-w-7xl mx-auto flex flex-col gap-12">
+    <footer id="company" className="relative bg-[#040b14] border-t border-slate-800/80 pb-12 text-slate-400 text-xs">
+      {/* Large Approved Brand Visual Footer Banner */}
+      <EnterpriseFooterBanner />
+
+      {/* Traditional Footer Navigation & Links */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 flex flex-col gap-12">
         {/* Columns Grid */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           {/* Col 1: NUELOGIXS ENTERPRISES */}
@@ -250,8 +255,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection, onOpenAction 
           </div>
 
           <div className="flex items-center gap-4 text-slate-400">
-            <span>Prototype Version 1.0 (Demo Mode)</span>
-            <span className="text-emerald-400">● Live Preview Active</span>
+            <span className="text-emerald-400">● Live Production Platform</span>
           </div>
         </div>
       </div>

@@ -1,7 +1,11 @@
 import React from 'react';
 import {
   Truck,
-  CreditCard,
+  Zap,
+  PhoneCall,
+  Tv,
+  Repeat,
+  Building2,
   Globe,
   Anchor,
   Wallet,
@@ -9,7 +13,6 @@ import {
   Smartphone,
   ShieldCheck,
   BarChart3,
-  Clock,
   Sparkles
 } from 'lucide-react';
 
@@ -31,59 +34,66 @@ const PLATFORM_BENEFITS: BenefitItem[] = [
   },
   {
     id: 'b-2',
-    title: 'Multi-Currency Business Accounts',
-    description: 'Receive bank transfers & card payments instantly',
-    icon: CreditCard,
+    title: 'Electricity Bills Payment',
+    description: 'Prepaid & postpaid tokens across DISCOs',
+    icon: Zap,
     color: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/30'
   },
   {
     id: 'b-3',
-    title: 'Cross-Border FX Payments',
-    description: 'Secure T+0 international settlement & escrow',
-    icon: Globe,
-    color: 'text-purple-400 bg-purple-500/10 border-purple-500/30'
+    title: 'Airtime & Data Top-ups',
+    description: 'Instant mobile top-ups & data bundles',
+    icon: PhoneCall,
+    color: 'text-cyan-400 bg-cyan-500/10 border-cyan-500/30'
   },
   {
     id: 'b-4',
-    title: 'Automated Customs & Clearance',
-    description: 'Fast-track maritime port duty & shipping documentation',
-    icon: Anchor,
-    color: 'text-blue-400 bg-blue-500/10 border-blue-500/30'
+    title: 'Cable TV Tokens & Subscriptions',
+    description: 'DStv, GOtv & StarTimes decoder renewals',
+    icon: Tv,
+    color: 'text-purple-400 bg-purple-500/10 border-purple-500/30'
   },
   {
     id: 'b-5',
-    title: 'Driver & Workforce Payouts',
-    description: 'Bulk instant disbursements to bank accounts & wallets',
-    icon: Wallet,
+    title: 'Auto Pay Role & Scheduled Rules',
+    description: 'Automated bill payments & recurring debits',
+    icon: Repeat,
     color: 'text-amber-400 bg-amber-500/10 border-amber-500/30'
   },
   {
     id: 'b-6',
-    title: 'Live GPS & Sensor Tracking',
-    description: 'Real-time cargo location & temperature updates',
-    icon: Radio,
+    title: 'Business Payments & Transfers',
+    description: 'Automated vendor settlement & corporate transfers',
+    icon: Building2,
     color: 'text-teal-400 bg-teal-500/10 border-teal-500/30'
   },
   {
     id: 'b-7',
-    title: 'In-Person POS Terminals',
-    description: 'Accept tap, transfer & QR payments at delivery',
-    icon: Smartphone,
+    title: 'Driver & Workforce Payouts',
+    description: 'Bulk instant disbursements to bank accounts',
+    icon: Wallet,
     color: 'text-indigo-400 bg-indigo-500/10 border-indigo-500/30'
   },
   {
     id: 'b-8',
+    title: 'Automated Customs & Clearance',
+    description: 'Fast-track maritime port duty & shipping docs',
+    icon: Anchor,
+    color: 'text-blue-400 bg-blue-500/10 border-blue-500/30'
+  },
+  {
+    id: 'b-9',
+    title: 'Live GPS & Sensor Tracking',
+    description: 'Real-time cargo location & temperature updates',
+    icon: Radio,
+    color: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/30'
+  },
+  {
+    id: 'b-10',
     title: 'Bank-Grade Payment Security',
     description: 'PCI-DSS compliant encrypted transactions',
     icon: ShieldCheck,
     color: 'text-cyan-300 bg-cyan-950/80 border-cyan-500/40'
-  },
-  {
-    id: 'b-9',
-    title: 'Predictive Route & Cost Optimization',
-    description: 'Save fuel and time with AI smart dispatch',
-    icon: BarChart3,
-    color: 'text-emerald-300 bg-emerald-950/80 border-emerald-500/40'
   }
 ];
 

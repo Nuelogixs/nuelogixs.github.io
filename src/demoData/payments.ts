@@ -7,59 +7,59 @@ export const DEMO_UTILITY_SERVICES: UtilityService[] = [
     code: 'POWER',
     category: 'electricity',
     icon: 'Zap',
-    description: 'Instant prepaid/postpaid electricity token generation across DISCO providers.',
+    description: 'Instant prepaid/postpaid electricity token generation across all DISCO providers.',
     placeholderAmount: '₦XX,XXX',
     availableProviders: ['Ikeja Electric (IE)', 'Eko Electric (EKEDC)', 'Abuja Electric (AEDC)', 'Kano Electric (KEDCO)']
   },
   {
     id: 'util-2',
-    name: 'Airtime Top-up',
-    code: 'AIRTIME',
+    name: 'Airtime & Data',
+    code: 'AIRDATA',
     category: 'airtime',
     icon: 'PhoneCall',
-    description: 'Automated top-up with instant bonus routing and multi-carrier support.',
+    description: 'Automated airtime top-up and high-speed data bundles delivered in milliseconds.',
     placeholderAmount: '₦X,XXX',
     availableProviders: ['MTN Nigeria', 'Airtel', 'Glo Mobile', '9mobile']
   },
   {
     id: 'util-3',
-    name: 'Data Bundles',
-    code: 'DATA',
-    category: 'data',
-    icon: 'Wifi',
-    description: 'High-speed corporate and personal data subscriptions delivered in milliseconds.',
-    placeholderAmount: '₦X,XXX',
-    availableProviders: ['MTN Corporate Data', 'Airtel SME', 'Glo Broadband', '9mobile Data']
-  },
-  {
-    id: 'util-4',
-    name: 'Cable TV Subscriptions',
+    name: 'Cable TV Tokens',
     code: 'CABLE',
     category: 'cable',
     icon: 'Tv',
-    description: 'Direct decoder re-activation and plan upgrades for homes and business hubs.',
+    description: 'Direct decoder re-activation tokens and subscription plan renewals.',
     placeholderAmount: '₦XX,XXX',
     availableProviders: ['DStv Nigeria', 'GOtv', 'Startimes', 'Showmax']
   },
   {
+    id: 'util-4',
+    name: 'Auto Pay Rules & Recurring',
+    code: 'AUTOPAY',
+    category: 'autopay',
+    icon: 'Repeat',
+    description: 'Automated scheduled bill payments, wallet threshold triggers & auto-debit rules.',
+    placeholderAmount: 'Automated',
+    availableProviders: ['Scheduled Rule Engine', 'Direct Wallet Debit', 'Standing Order']
+  },
+  {
     id: 'util-5',
+    name: 'Business Payments',
+    code: 'BIZPAY',
+    category: 'business',
+    icon: 'Building2',
+    description: 'Automated supplier invoice settlement, corporate transfers & vendor disbursements.',
+    placeholderAmount: '₦X,XXX,XXX',
+    availableProviders: ['Corporate Wallet', 'Escrow Account', 'Commercial Wire']
+  },
+  {
+    id: 'util-6',
     name: 'Bulk Workforce Disbursement',
     code: 'DISBURSE',
     category: 'disbursement',
     icon: 'Users',
-    description: 'Batch payroll and daily dispatcher stipend payout engine with zero failed transfers.',
+    description: 'Batch payroll and daily dispatcher stipend payout engine with instant settlement.',
     placeholderAmount: '₦XXX,XXX',
     availableProviders: ['NIBSS Direct', 'Monnify Settlement', 'Interbank Express']
-  },
-  {
-    id: 'util-6',
-    name: 'Vendor & Business Payments',
-    code: 'VENDOR',
-    category: 'business',
-    icon: 'Building2',
-    description: 'Automated supplier invoice settlement and cross-border vendor disbursements.',
-    placeholderAmount: '₦X,XXX,XXX',
-    availableProviders: ['Corporate Wallet', 'Escrow Account', 'Commercial Wire']
   }
 ];
 

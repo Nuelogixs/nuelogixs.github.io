@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { DEMO_UTILITY_SERVICES } from '../demoData/payments';
 import { UtilityService } from '../types';
-import { Zap, PhoneCall, Wifi, Tv, Users, Building2, ArrowRight, CheckCircle2, Shield } from 'lucide-react';
+import { Zap, PhoneCall, Wifi, Tv, Users, Building2, Repeat, ArrowRight, CheckCircle2, Shield } from 'lucide-react';
 
 interface PaymentExplorerProps {
   onOpenAction: (title: string, subtitle: string) => void;
@@ -22,6 +22,8 @@ export const PaymentExplorer: React.FC<PaymentExplorerProps> = ({ onOpenAction }
         return <Wifi className="w-5 h-5 text-blue-400" />;
       case 'cable':
         return <Tv className="w-5 h-5 text-purple-400" />;
+      case 'autopay':
+        return <Repeat className="w-5 h-5 text-amber-400" />;
       case 'disbursement':
         return <Users className="w-5 h-5 text-emerald-400" />;
       case 'business':
