@@ -17,16 +17,42 @@ export const Navbar: React.FC<NavbarProps> = ({
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>('');
 
   useEffect(() => {
     const handleScroll = () => {
+      // Header shadow/blur toggle
       if (window.scrollY > 20) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
+
+      // Scroll spy logic
+      const sections = ['logistics', 'payments', 'business', 'ai-intelligence', 'company'];
+      let current = '';
+      
+      // We iterate backwards to find the deepest section currently in view
+      // This is robust: if multiple sections are in view, the lowest one gets priority, 
+      // or we just find the one whose top is near or past the header offset.
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          // 150px offset to account for sticky navbar and breathing room
+          if (rect.top <= 150) {
+            current = section;
+          }
+        }
+      }
+      
+      setActiveSection(current);
     };
-    window.addEventListener('scroll', handleScroll);
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    // Call once to set initial state
+    handleScroll();
+    
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -62,31 +88,51 @@ export const Navbar: React.FC<NavbarProps> = ({
             <nav className="hidden lg:flex items-center gap-1 bg-slate-900/60 p-1 rounded-xl border border-slate-800/60 text-sm">
               <button
                 onClick={() => onNavigateSection('logistics')}
-                className="px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50 transition-colors font-medium flex items-center gap-1"
+                className={`px-3.5 py-1.5 rounded-lg transition-colors font-medium ${
+                  activeSection === 'logistics' 
+                    ? 'text-cyan-400 bg-slate-800/80 shadow-sm'
+                    : 'text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50'
+                }`}
               >
                 Logistics
               </button>
               <button
                 onClick={() => onNavigateSection('payments')}
-                className="px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-emerald-400 hover:bg-slate-800/50 transition-colors font-medium"
+                className={`px-3.5 py-1.5 rounded-lg transition-colors font-medium ${
+                  activeSection === 'payments' 
+                    ? 'text-emerald-400 bg-slate-800/80 shadow-sm'
+                    : 'text-slate-300 hover:text-emerald-400 hover:bg-slate-800/50'
+                }`}
               >
                 Payments
               </button>
               <button
                 onClick={() => onNavigateSection('business')}
-                className="px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-blue-400 hover:bg-slate-800/50 transition-colors font-medium"
+                className={`px-3.5 py-1.5 rounded-lg transition-colors font-medium ${
+                  activeSection === 'business' 
+                    ? 'text-blue-400 bg-slate-800/80 shadow-sm'
+                    : 'text-slate-300 hover:text-blue-400 hover:bg-slate-800/50'
+                }`}
               >
                 Business
               </button>
               <button
                 onClick={() => onNavigateSection('ai-intelligence')}
-                className="px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-purple-400 hover:bg-slate-800/50 transition-colors font-medium"
+                className={`px-3.5 py-1.5 rounded-lg transition-colors font-medium ${
+                  activeSection === 'ai-intelligence' 
+                    ? 'text-purple-400 bg-slate-800/80 shadow-sm'
+                    : 'text-slate-300 hover:text-purple-400 hover:bg-slate-800/50'
+                }`}
               >
                 AI Intelligence
               </button>
               <button
                 onClick={() => onNavigateSection('company')}
-                className="px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-slate-100 hover:bg-slate-800/50 transition-colors font-medium"
+                className={`px-3.5 py-1.5 rounded-lg transition-colors font-medium ${
+                  activeSection === 'company' 
+                    ? 'text-slate-100 bg-slate-800/80 shadow-sm'
+                    : 'text-slate-300 hover:text-slate-100 hover:bg-slate-800/50'
+                }`}
               >
                 Ecosystem
               </button>
