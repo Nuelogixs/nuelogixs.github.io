@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'motion/react';
 import { DemoBanner } from './components/DemoBanner';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
@@ -13,6 +14,7 @@ import { UnifiedEcosystemFlow } from './components/UnifiedEcosystemFlow';
 import { BusinessCommandCenter } from './components/BusinessCommandCenter';
 import { AudienceSection } from './components/AudienceSection';
 import { TrustSection } from './components/TrustSection';
+import { FAQSection } from './components/FAQSection';
 import { CTASection } from './components/CTASection';
 import { Footer } from './components/Footer';
 import { LoginModal } from './components/LoginModal';
@@ -74,6 +76,13 @@ export default function App() {
     }
   };
 
+  const sectionVariant = {
+    initial: { opacity: 0, y: 35 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, amount: 0.1 },
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
+  };
+
   return (
     <div className="min-h-screen bg-[#07111f] text-slate-100 flex flex-col font-sans selection:bg-cyan-500 selection:text-slate-950">
       {/* Top Prototype / Demo Mode Banner */}
@@ -90,58 +99,89 @@ export default function App() {
       {/* Main Content Sections */}
       <main className="flex-1">
         {/* 1. Hero Section + Interactive Ecosystem Map */}
-        <Hero
-          onNavigateSection={handleNavigateSection}
-          onOpenAction={handleOpenActionModal}
-        />
+        <motion.div {...sectionVariant}>
+          <Hero
+            onNavigateSection={handleNavigateSection}
+            onOpenAction={handleOpenActionModal}
+          />
+        </motion.div>
 
         {/* 2. Interactive Mission Selector ("WHAT DO YOU NEED TO DO?") */}
-        <MissionSelector
-          onNavigateSection={handleNavigateSection}
-          onOpenAction={handleOpenActionModal}
-        />
+        <motion.div {...sectionVariant}>
+          <MissionSelector
+            onNavigateSection={handleNavigateSection}
+            onOpenAction={handleOpenActionModal}
+          />
+        </motion.div>
 
         {/* 3. Nuelogixs Section: "Your Logistics Network. Connected." */}
-        <NuelogixsSection 
-          onOpenAction={handleOpenActionModal} 
-          onOpenDemoBooking={() => setIsDemoBookingOpen(true)}
-        />
+        <motion.div {...sectionVariant}>
+          <NuelogixsSection 
+            onOpenAction={handleOpenActionModal} 
+            onOpenDemoBooking={() => setIsDemoBookingOpen(true)}
+          />
+        </motion.div>
 
         {/* 4. Animated Workflow Timeline: BOOK → MATCH → PICK UP → TRACK → DELIVER */}
-        <WorkflowTimeline onOpenAction={handleOpenActionModal} />
+        <motion.div {...sectionVariant}>
+          <WorkflowTimeline onOpenAction={handleOpenActionModal} />
+        </motion.div>
 
         {/* 5. AI Logistics Intelligence Section */}
-        <AILogisticsSection onOpenAIDemo={(actionTitle) => setAiDrawerState({ isOpen: true, actionTitle })} />
+        <motion.div {...sectionVariant}>
+          <AILogisticsSection onOpenAIDemo={(actionTitle) => setAiDrawerState({ isOpen: true, actionTitle })} />
+        </motion.div>
 
         {/* 6. Visual Transition to ESIK Pay */}
-        <EcosystemTransition />
+        <motion.div {...sectionVariant}>
+          <EcosystemTransition />
+        </motion.div>
 
         {/* 7. ESIK Pay Section: Utility Payments & Transactions */}
-        <EsikPaySection 
-          onOpenAction={handleOpenActionModal}
-          onOpenDemoPayment={() => setIsDemoPaymentOpen(true)}
-        />
+        <motion.div {...sectionVariant}>
+          <EsikPaySection 
+            onOpenAction={handleOpenActionModal}
+            onOpenDemoPayment={() => setIsDemoPaymentOpen(true)}
+          />
+        </motion.div>
 
         {/* 8. Workforce Disbursement Demo */}
-        <WorkforceDisbursementDemo onOpenDisbursementDemo={(workerCount) => setDisbursementDrawerState({ isOpen: true, workerCount })} />
+        <motion.div {...sectionVariant}>
+          <WorkforceDisbursementDemo onOpenDisbursementDemo={(workerCount) => setDisbursementDrawerState({ isOpen: true, workerCount })} />
+        </motion.div>
 
         {/* 9. Unified Ecosystem Flow: "One Ecosystem. Multiple Operations." */}
-        <UnifiedEcosystemFlow onOpenAction={handleOpenActionModal} />
+        <motion.div {...sectionVariant}>
+          <UnifiedEcosystemFlow onOpenAction={handleOpenActionModal} />
+        </motion.div>
 
         {/* 10. Business Command Center Composite Preview */}
-        <BusinessCommandCenter onOpenAction={handleOpenActionModal} />
+        <motion.div {...sectionVariant}>
+          <BusinessCommandCenter onOpenAction={handleOpenActionModal} />
+        </motion.div>
 
         {/* 11. Who We Serve (Audience Cards) */}
-        <AudienceSection onOpenAction={handleOpenActionModal} />
+        <motion.div {...sectionVariant}>
+          <AudienceSection onOpenAction={handleOpenActionModal} />
+        </motion.div>
 
         {/* 12. Trust & System Architecture Section */}
-        <TrustSection />
+        <motion.div {...sectionVariant}>
+          <TrustSection />
+        </motion.div>
 
-        {/* 13. Closing CTA Section */}
-        <CTASection
-          onNavigateSection={handleNavigateSection}
-          onOpenAction={handleOpenActionModal}
-        />
+        {/* 13. FAQ Section */}
+        <motion.div {...sectionVariant}>
+          <FAQSection onOpenAction={(actionType, title, subtitle) => handleOpenActionModal(title, subtitle || '')} />
+        </motion.div>
+
+        {/* 14. Closing CTA Section */}
+        <motion.div {...sectionVariant}>
+          <CTASection
+            onNavigateSection={handleNavigateSection}
+            onOpenAction={handleOpenActionModal}
+          />
+        </motion.div>
       </main>
 
       {/* Footer */}
