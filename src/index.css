@@ -109,3 +109,24 @@
 .animate-pulse-glow {
   animation: pulseGlow 3s ease-in-out infinite;
 }
+
+/* Groove Display Infinite Scroll Animation */
+@keyframes grooveScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-groove-scroll {
+  display: flex;
+  width: max-content;
+  animation: grooveScroll 35s linear infinite;
+}
+
+.animate-groove-scroll:hover {
+  animation-play-state: paused;
+}
+
