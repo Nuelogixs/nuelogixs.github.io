@@ -30,7 +30,7 @@ export const TrustSection: React.FC = () => {
     },
     {
       icon: <CreditCard className="w-5 h-5 text-emerald-400" />,
-      title: 'Payment Escrow Locks',
+      title: 'Payment Settlement Locks',
       description: 'Automated release of driver stipends and vendor payouts strictly upon QR sign-off.'
     },
     {
@@ -56,7 +56,7 @@ export const TrustSection: React.FC = () => {
             Built for Transactions That Matter.
           </h2>
           <p className="text-slate-400 text-sm max-w-xl mt-2">
-            Verifiable operational logs, automated escrow release, and role-based enterprise access control.
+            Verifiable operational logs, automated settlement release, and role-based enterprise access control.
           </p>
         </div>
 

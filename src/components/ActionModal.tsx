@@ -70,7 +70,7 @@ export const ActionModal: React.FC<ActionModalProps> = ({
                 <span className="text-emerald-400 font-bold">0ms (Local Mock)</span>
               </div>
               <div className="flex items-center justify-between text-slate-400">
-                <span>ESIK PAY ESCROW</span>
+                <span>ESIK PAY SETTLEMENT</span>
                 <span className="text-slate-200 font-bold">Ready</span>
               </div>
             </div>

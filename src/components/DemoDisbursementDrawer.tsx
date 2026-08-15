@@ -8,7 +8,7 @@ interface DemoDisbursementDrawerProps {
   workerCount: number;
 }
 
-type DisbursementStep = 'review' | 'escrow' | 'processing' | 'success';
+type DisbursementStep = 'review' | 'funding' | 'processing' | 'success';
 
 export const DemoDisbursementDrawer: React.FC<DemoDisbursementDrawerProps> = ({ isOpen, onClose, workerCount }) => {
   const [step, setStep] = useState<DisbursementStep>('review');
@@ -27,7 +27,7 @@ export const DemoDisbursementDrawer: React.FC<DemoDisbursementDrawerProps> = ({ 
   };
 
   const handleConfirm = () => {
-    setStep('escrow');
+    setStep('funding');
     setTimeout(() => {
       setStep('processing');
       setTimeout(() => {
@@ -95,12 +95,12 @@ export const DemoDisbursementDrawer: React.FC<DemoDisbursementDrawerProps> = ({ 
             </div>
           )}
 
-          {step === 'escrow' && (
+          {step === 'funding' && (
             <div className="py-12 flex flex-col items-center justify-center text-center gap-4">
               <Loader2 className="w-10 h-10 text-blue-400 animate-spin" />
               <div>
                 <h4 className="font-bold text-slate-100 font-mono">Securing Funds...</h4>
-                <p className="text-xs text-slate-400 mt-1">Allocating from master escrow wallet</p>
+                <p className="text-xs text-slate-400 mt-1">Allocating from master wallet</p>
               </div>
             </div>
           )}

@@ -112,7 +112,7 @@ export const WorkflowTimeline: React.FC<WorkflowTimelineProps> = ({ onOpenAction
               </div>
               <div className="p-3 rounded-xl bg-slate-900 border border-slate-800/80 flex items-center justify-between">
                 <span className="text-slate-400">SETTLEMENT LINK</span>
-                <span className="text-emerald-400 font-bold">Esik Pay Escrow</span>
+                <span className="text-emerald-400 font-bold">Esik Pay Settlement</span>
               </div>
             </div>
 

@@ -100,7 +100,7 @@ export const DEMO_ECOSYSTEM_STEPS: EcosystemStep[] = [
     id: 'eco-2',
     title: 'Digital Order Creation',
     entity: 'ORDER',
-    role: 'Generates secure tracking ID & escrow hash',
+    role: 'Generates secure tracking ID & transaction hash',
     type: 'logistics',
     icon: 'FileText'
   },
@@ -140,7 +140,7 @@ export const DEMO_ECOSYSTEM_STEPS: EcosystemStep[] = [
     id: 'eco-7',
     title: 'Instant Settlement Trigger',
     entity: 'PAYMENT',
-    role: 'Escrow unlocked for driver payout',
+    role: 'Funds unlocked for driver payout',
     type: 'financial',
     icon: 'Key'
   },

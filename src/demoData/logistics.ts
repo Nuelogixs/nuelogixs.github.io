@@ -73,7 +73,7 @@ export const DEMO_MAP_NODES: MapNode[] = [
     rating: 5.0,
     distanceKm: 'Esik Pay Settlement',
     etaMin: 'Instant',
-    details: 'Automated Wallet Escrow & Settlement'
+    details: 'Automated Wallet Hold & Settlement'
   }
 ];
 

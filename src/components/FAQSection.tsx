@@ -13,7 +13,7 @@ const FAQ_DATA: FAQItem[] = [
     id: 'faq-1',
     category: 'ecosystem',
     question: 'How do Nuelogixs and Ezik Pay integrate into a single unified platform?',
-    answer: 'Nuelogixs handles physical movement, freight dispatch, route optimization, and asset tracking, while Ezik Pay manages the underlying financial layer—including automated driver payouts, multi-currency escrow, instant merchant settlement, and virtual accounts. Through unified APIs and single sign-on, businesses manage both goods and capital from a single intelligence dashboard.',
+    answer: 'Nuelogixs handles physical movement, freight dispatch, route optimization, and asset tracking, while Ezik Pay manages the underlying financial layer—including automated driver payouts, multi-currency wallets, instant merchant settlement, and virtual accounts. Through unified APIs and single sign-on, businesses manage both goods and capital from a single intelligence dashboard.',
   },
   {
     id: 'faq-2',
@@ -49,7 +49,7 @@ const FAQ_DATA: FAQItem[] = [
     id: 'faq-7',
     category: 'security',
     question: 'How are funds protected and compliant on Ezik Pay?',
-    answer: 'Ezik Pay adheres strictly to PCI-DSS Level 1 compliance, ISO 27001 security standards, and local NDPR/GDPR privacy regulations. All financial transactions use AES-256 bit encryption and multi-sig escrow holdback to protect both buyers and sellers until delivery is confirmed.',
+    answer: 'Ezik Pay adheres strictly to PCI-DSS Level 1 compliance, ISO 27001 security standards, and local NDPR/GDPR privacy regulations. All financial transactions use AES-256 bit encryption and secure holdbacks to protect both buyers and sellers until delivery is confirmed.',
   },
   {
     id: 'faq-8',

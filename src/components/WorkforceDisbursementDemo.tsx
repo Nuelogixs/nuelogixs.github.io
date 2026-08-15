@@ -73,7 +73,7 @@ export const WorkforceDisbursementDemo: React.FC<WorkforceDisbursementDemoProps>
             </div>
             <div className="flex items-center justify-start sm:justify-end">
               <span className="px-3 py-1 rounded-lg bg-emerald-950 text-emerald-400 border border-emerald-800/60 text-[10px] font-bold">
-                ✓ ESCROW FUNDED
+                ✓ WALLET FUNDED
               </span>
             </div>
           </div>

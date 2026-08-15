@@ -157,10 +157,18 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection, onOpenAction 
             <ul className="space-y-2 font-mono">
               <li>
                 <button
-                  onClick={() => onOpenAction('About Platform', 'Nuelogixs × Esik Pay Infrastructure')}
+                  onClick={() => onNavigateSection('logistics')}
                   className="hover:text-slate-200 transition-colors"
                 >
-                  About Ecosystem
+                  About Nuelogixs Enterprises
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigateSection('payments')}
+                  className="hover:text-slate-200 transition-colors"
+                >
+                  About Esik Pay
                 </button>
               </li>
               <li>
@@ -214,7 +222,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection, onOpenAction 
               </li>
               <li>
                 <button
-                  onClick={() => onOpenAction('Security Specs', 'Monnify & Escrow Security Audit')}
+                  onClick={() => onOpenAction('Security Specs', 'Monnify Security Audit')}
                   className="hover:text-slate-200 transition-colors"
                 >
                   Security Audit

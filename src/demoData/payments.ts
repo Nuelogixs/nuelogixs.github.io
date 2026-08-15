@@ -49,7 +49,7 @@ export const DEMO_UTILITY_SERVICES: UtilityService[] = [
     icon: 'Building2',
     description: 'Automated supplier invoice settlement, corporate transfers & vendor disbursements.',
     placeholderAmount: '₦X,XXX,XXX',
-    availableProviders: ['Corporate Wallet', 'Escrow Account', 'Commercial Wire']
+    availableProviders: ['Corporate Wallet', 'Reserve Account', 'Commercial Wire']
   },
   {
     id: 'util-6',

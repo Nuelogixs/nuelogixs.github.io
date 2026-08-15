@@ -84,7 +84,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateSection, onOpenAction }) =
               <Zap className="w-3.5 h-3.5 text-cyan-400" /> Instant Dispatch Matching
             </div>
             <div className="flex items-center gap-1.5">
-              <Shield className="w-3.5 h-3.5 text-emerald-400" /> Automated Escrow & Utilities
+              <Shield className="w-3.5 h-3.5 text-emerald-400" /> Automated Settlement & Utilities
             </div>
             <div className="flex items-center gap-1.5">
               <Sparkles className="w-3.5 h-3.5 text-purple-400" /> Predictive AI Route Guard
