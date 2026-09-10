@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Truck, PackageCheck, Zap, Building2, ArrowRight } from 'lucide-react';
+import { Truck, PackageCheck, Zap, Building2, ArrowRight, ShoppingBag } from 'lucide-react';
 
 interface MissionSelectorProps {
   onNavigateSection: (sectionId: string) => void;
@@ -115,6 +115,26 @@ export const MissionSelector: React.FC<MissionSelectorProps> = ({
               </div>
             );
           })}
+        </div>
+
+        {/* Direct Sourcing Banner to Wholesale Store */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-2xl bg-slate-900/60 border border-slate-800/80">
+          <div className="flex items-center gap-3">
+            <div className="p-2 rounded-xl bg-cyan-950/80 border border-cyan-800/60 text-cyan-400">
+              <ShoppingBag className="w-4 h-4" />
+            </div>
+            <div>
+              <div className="text-xs font-bold text-slate-200 font-mono">LOOKING FOR B2B WHOLESALE INVENTORY?</div>
+              <div className="text-[11px] text-slate-400 mt-0.5">Directly order verified bulk products with instant freight dispatch and integrated payments.</div>
+            </div>
+          </div>
+          <button
+            onClick={() => onNavigateSection('store')}
+            className="shrink-0 px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs transition-all flex items-center gap-1.5 shadow-md shadow-cyan-500/10 cursor-pointer"
+          >
+            Explore Wholesale Store
+            <ArrowRight className="w-3.5 h-3.5" />
+          </button>
         </div>
       </div>
     </section>

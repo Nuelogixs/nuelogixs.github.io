@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layers, ArrowRight, Lock, Truck, CreditCard, Building, Brain, Info, Sparkles } from 'lucide-react';
+import { Layers, ArrowRight, Lock, Truck, CreditCard, Building, Brain, Info, Sparkles, ShoppingBag } from 'lucide-react';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -47,6 +47,20 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
               <div>
                 <div className="text-sm font-semibold text-slate-200">Logistics & Dispatch</div>
                 <div className="text-xs text-slate-400">Nuelogixs Enterprises</div>
+              </div>
+            </div>
+            <ArrowRight className="w-4 h-4 text-slate-500" />
+          </button>
+
+          <button
+            onClick={() => onNavigateSection('store')}
+            className="flex items-center justify-between p-3.5 rounded-xl bg-slate-900/60 border border-slate-800/80 text-left hover:border-cyan-500/50 transition-colors"
+          >
+            <div className="flex items-center gap-3">
+              <ShoppingBag className="w-5 h-5 text-cyan-400" />
+              <div>
+                <div className="text-sm font-semibold text-slate-200">Wholesale Store</div>
+                <div className="text-xs text-slate-400">B2B Live Catalog</div>
               </div>
             </div>
             <ArrowRight className="w-4 h-4 text-slate-500" />

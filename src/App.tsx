@@ -5,6 +5,7 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { MissionSelector } from './components/MissionSelector';
 import { NuelogixsSection } from './components/NuelogixsSection';
+import { WholesaleStoreSection } from './components/WholesaleStoreWidget';
 import { WorkflowTimeline } from './components/WorkflowTimeline';
 import { AILogisticsSection } from './components/AILogisticsSection';
 import { EcosystemTransition } from './components/EcosystemTransition';
@@ -24,6 +25,7 @@ import { DemoBookingDrawer } from './components/DemoBookingDrawer';
 import { DemoPaymentDrawer } from './components/DemoPaymentDrawer';
 import { DemoAIDrawer } from './components/DemoAIDrawer';
 import { DemoDisbursementDrawer } from './components/DemoDisbursementDrawer';
+import { CookieBanner } from './components/CookieBanner';
 
 export default function App() {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
@@ -122,7 +124,12 @@ export default function App() {
           />
         </motion.div>
 
-        {/* 4. Animated Workflow Timeline: BOOK → MATCH → PICK UP → TRACK → DELIVER */}
+        {/* 4. Nuelogixs Wholesale Store: Live B2B Catalog & Bulk Ordering */}
+        <motion.div {...sectionVariant}>
+          <WholesaleStoreSection onOpenAction={handleOpenActionModal} />
+        </motion.div>
+
+        {/* 5. Animated Workflow Timeline: BOOK → MATCH → PICK UP → TRACK → DELIVER */}
         <motion.div {...sectionVariant}>
           <WorkflowTimeline onOpenAction={handleOpenActionModal} />
         </motion.div>
@@ -229,6 +236,8 @@ export default function App() {
         onClose={() => setDisbursementDrawerState(prev => ({ ...prev, isOpen: false }))}
         workerCount={disbursementDrawerState.workerCount}
       />
+      
+      <CookieBanner />
     </div>
   );
 }

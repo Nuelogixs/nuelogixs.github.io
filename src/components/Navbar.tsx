@@ -29,7 +29,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       }
 
       // Scroll spy logic
-      const sections = ['logistics', 'payments', 'business', 'ai-intelligence', 'company'];
+      const sections = ['logistics', 'store', 'payments', 'business', 'ai-intelligence', 'company'];
       let current = '';
       
       // We iterate backwards to find the deepest section currently in view
@@ -95,6 +95,16 @@ export const Navbar: React.FC<NavbarProps> = ({
                 }`}
               >
                 Logistics
+              </button>
+              <button
+                onClick={() => onNavigateSection('store')}
+                className={`px-3.5 py-1.5 rounded-lg transition-colors font-medium ${
+                  activeSection === 'store' 
+                    ? 'text-cyan-400 bg-slate-800/80 shadow-sm'
+                    : 'text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50'
+                }`}
+              >
+                Store
               </button>
               <button
                 onClick={() => onNavigateSection('payments')}
