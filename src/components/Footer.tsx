@@ -236,6 +236,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection, onOpenAction 
                   Security Audit
                 </button>
               </li>
+              <li>
+                <button
+                  onClick={() => window.dispatchEvent(new CustomEvent('open-cookie-settings'))}
+                  className="hover:text-cyan-400 transition-colors text-left"
+                >
+                  Cookie Preferences
+                </button>
+              </li>
             </ul>
           </div>
         </div>
