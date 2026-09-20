@@ -5,9 +5,18 @@ export function WholesaleStoreWidget() {
   return (
     <div className="w-full max-w-7xl mx-auto my-6 rounded-2xl overflow-hidden border border-[#27344D] bg-[#0B1220] shadow-2xl">
       <iframe
-        src="https://ais-dev-t6od2yogczpajsgz4nweyg-285895760211.europe-west3.run.app/embed/store-widget?embed=true"
+        src="https://ais-pre-t6od2yogczpajsgz4nweyg-285895760211.europe-west3.run.app/embed/store-widget?embed=true"
         className="w-full h-[750px] border-0"
-        title="Nuelogixs Wholesale Store"
+        style={{
+          border: '1px solid #27344D',
+          borderRadius: '16px',
+          width: '100%',
+          maxWidth: '100%',
+          minHeight: '750px',
+          backgroundColor: '#0B1220',
+          overflow: 'hidden',
+        }}
+        title="Nuelogixs Wholesale Direct Products"
         loading="lazy"
         allow="clipboard-write"
       />
@@ -20,7 +29,7 @@ interface WholesaleStoreSectionProps {
 }
 
 export const WholesaleStoreSection: React.FC<WholesaleStoreSectionProps> = ({ onOpenAction }) => {
-  const storeUrl = "https://ais-dev-t6od2yogczpajsgz4nweyg-285895760211.europe-west3.run.app/embed/store-widget?embed=true";
+  const storeUrl = "https://ais-pre-t6od2yogczpajsgz4nweyg-285895760211.europe-west3.run.app/embed/store-widget?embed=true";
 
   return (
     <section id="store" className="relative py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
