@@ -2,24 +2,50 @@ import React from 'react';
 import { ShoppingBag, ArrowUpRight, ShieldCheck, Sparkles, RefreshCw, ExternalLink } from 'lucide-react';
 
 export function WholesaleStoreWidget() {
+  const storeUrl = "https://ais-pre-t6od2yogczpajsgz4nweyg-285895760211.europe-west3.run.app/embed/store-widget?embed=true";
+
   return (
-    <div className="w-full max-w-7xl mx-auto my-6 rounded-2xl overflow-hidden border border-[#27344D] bg-[#0B1220] shadow-2xl">
-      <iframe
-        src="https://ais-pre-t6od2yogczpajsgz4nweyg-285895760211.europe-west3.run.app/embed/store-widget?embed=true"
-        className="w-full h-[750px] border-0"
-        style={{
-          border: '1px solid #27344D',
-          borderRadius: '16px',
-          width: '100%',
-          maxWidth: '100%',
-          minHeight: '750px',
-          backgroundColor: '#0B1220',
-          overflow: 'hidden',
-        }}
-        title="Nuelogixs Wholesale Direct Products"
-        loading="lazy"
-        allow="clipboard-write"
-      />
+    <div className="w-full max-w-7xl mx-auto my-6 rounded-2xl overflow-hidden border border-[#27344D] bg-[#0B1220] shadow-2xl flex flex-col">
+      {/* Top Helper Bar */}
+      <div className="bg-[#09101d] px-4 py-3 border-b border-[#27344D] flex flex-wrap items-center justify-between gap-3 text-xs">
+        <div className="flex items-center gap-2 text-slate-300 font-mono">
+          <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+          <span>Nuelogixs Wholesale Direct Catalog</span>
+        </div>
+        <a
+          href={storeUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 font-semibold transition-all"
+        >
+          <span>Launch Store in New Tab</span>
+          <ExternalLink className="w-3.5 h-3.5" />
+        </a>
+      </div>
+
+      {/* Frame Container */}
+      <div className="relative w-full min-h-[750px] bg-[#0B1220]">
+        {/* Nuelogixs Wholesale Direct Store Widget */}
+        <iframe
+          src="https://ais-pre-t6od2yogczpajsgz4nweyg-285895760211.europe-west3.run.app/embed/store-widget?embed=true"
+          width="100%"
+          height="750"
+          style={{
+            border: '1px solid #27344D',
+            borderRadius: '16px',
+            width: '100%',
+            maxWidth: '100%',
+            minHeight: '750px',
+            backgroundColor: '#0B1220',
+            overflow: 'hidden',
+          }}
+          title="Nuelogixs Wholesale Direct Products"
+          frameBorder="0"
+          allow="clipboard-write"
+          loading="lazy"
+        />
+        {/* When users click any product, it opens in the main store */}
+      </div>
     </div>
   );
 }
